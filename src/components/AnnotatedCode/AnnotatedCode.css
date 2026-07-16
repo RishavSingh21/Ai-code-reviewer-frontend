@@ -1,0 +1,157 @@
+.annotated-code {
+  border: 1px solid var(--border-glass);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  background: #0d1117;
+}
+
+.annotation-toolbar {
+  padding: 12px 16px;
+  background: rgba(255, 255, 255, 0.03);
+  border-bottom: 1px solid var(--border-glass);
+}
+
+.annotation-filters {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.filter-btn {
+  padding: 4px 12px;
+  border-radius: 20px;
+  border: 1px solid var(--border-glass);
+  background: transparent;
+  color: var(--text-secondary);
+  font-size: 12px;
+  font-weight: 500;
+  transition: all var(--transition-fast);
+  text-transform: capitalize;
+}
+
+.filter-btn:hover {
+  border-color: var(--border-hover);
+  color: var(--text-primary);
+}
+
+.filter-btn.active {
+  background: var(--accent-blue);
+  border-color: var(--accent-blue);
+  color: white;
+}
+
+.code-with-annotations {
+  font-family: 'Fira Code', 'Cascadia Code', 'JetBrains Mono', monospace;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.code-line {
+  display: flex;
+  align-items: stretch;
+  transition: background var(--transition-fast);
+  border-left: 3px solid transparent;
+}
+
+.code-line:hover {
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.code-line.has-annotation {
+  background: rgba(239, 68, 68, 0.04);
+}
+
+.code-line.has-annotation.hovered {
+  background: rgba(239, 68, 68, 0.08);
+}
+
+.line-number {
+  width: 50px;
+  padding: 0 12px;
+  text-align: right;
+  color: var(--text-muted);
+  font-size: 12px;
+  user-select: none;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.line-marker {
+  width: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.marker-dot {
+  font-size: 10px;
+}
+
+.line-content {
+  flex: 1;
+  padding: 0 16px 0 4px;
+  margin: 0;
+  overflow-x: auto;
+  white-space: pre;
+}
+
+.line-content code {
+  color: #e6edf3;
+}
+
+.annotation-inline {
+  margin: 0 0 0 78px;
+  padding: 10px 16px;
+  border-left: 3px solid;
+  animation: fadeIn 0.2s ease-out;
+}
+
+.annotation-inline.severity-critical {
+  background: rgba(239, 68, 68, 0.06);
+  border-color: var(--accent-red);
+}
+
+.annotation-inline.severity-warning {
+  background: rgba(245, 158, 11, 0.06);
+  border-color: var(--accent-yellow);
+}
+
+.annotation-inline.severity-info {
+  background: rgba(59, 130, 246, 0.06);
+  border-color: var(--accent-blue);
+}
+
+.annotation-inline.severity-suggestion {
+  background: rgba(16, 185, 129, 0.06);
+  border-color: var(--accent-green);
+}
+
+.annotation-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 4px;
+}
+
+.annotation-category {
+  font-size: 11px;
+  color: var(--text-muted);
+  text-transform: capitalize;
+}
+
+.annotation-message {
+  font-size: 13px;
+  color: var(--text-primary);
+  font-family: 'Inter', sans-serif;
+  line-height: 1.5;
+}
+
+.annotation-suggestion {
+  font-size: 12px;
+  color: var(--accent-green);
+  margin-top: 4px;
+  font-family: 'Inter', sans-serif;
+}

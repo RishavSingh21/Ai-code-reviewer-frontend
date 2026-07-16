@@ -1,0 +1,13 @@
+.language-select {
+  padding: 6px 12px;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-glass);
+  border-radius: 6px;
+  color: var(--text-primary);
+  font-size: 13px;
+}
+
+.language-select:focus {
+  outline: none;
+  border-color: var(--accent-blue);
+}

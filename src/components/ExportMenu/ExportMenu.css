@@ -1,0 +1,70 @@
+.export-menu {
+  position: relative;
+}
+
+.export-trigger {
+  padding: 8px 18px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-glass);
+  border-radius: var(--radius-sm);
+  color: var(--text-primary);
+  font-size: 13px;
+  font-weight: 500;
+  transition: all var(--transition-fast);
+}
+
+.export-trigger:hover {
+  border-color: var(--accent-blue);
+  box-shadow: var(--shadow-glow-blue);
+}
+
+.export-dropdown {
+  position: absolute;
+  top: calc(100% + 6px);
+  right: 0;
+  min-width: 220px;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-glass);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-lg);
+  z-index: 50;
+  overflow: hidden;
+  animation: fadeIn 0.15s ease-out;
+}
+
+.export-dropdown button {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  padding: 12px 16px;
+  border: none;
+  background: transparent;
+  color: var(--text-primary);
+  text-align: left;
+  transition: background var(--transition-fast);
+}
+
+.export-dropdown button:hover {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.export-dropdown button + button {
+  border-top: 1px solid var(--border-glass);
+}
+
+.export-icon {
+  font-size: 20px;
+  flex-shrink: 0;
+}
+
+.export-dropdown div strong {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.export-dropdown div span {
+  font-size: 11px;
+  color: var(--text-muted);
+}
